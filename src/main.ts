@@ -1,5 +1,7 @@
 import './style.css'
+import { Header } from './components/Header';
 
+// Inicializácia preloadera
 class Preloader {
     private element: HTMLDivElement;
     
@@ -37,9 +39,14 @@ class Preloader {
 
 // Počkáme na načítanie stránky
 window.addEventListener('load', () => {
+    // Inicializácia preloadera
     const preloader = new Preloader();
     
-    // Simulujeme načítanie (môžeme neskôr nahradiť reálnym načítaním assets)
+    // Inicializácia headera
+    const header = new Header();
+    header.mount(document.body);
+    
+    // Simulujeme načítanie
     setTimeout(() => {
         preloader.hide();
     }, 2000);

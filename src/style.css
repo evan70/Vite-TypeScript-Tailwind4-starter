@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Existujúce animácie */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -22,4 +23,19 @@
 
 .animate-spin-slow {
     animation: spin-slow 3s linear infinite;
+}
+
+/* Nové štýly pre header */
+.container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Dark mode */
+.dark {
+    @apply bg-gray-900 text-white;
+}
+
+/* Transitions */
+.transition-colors {
+    @apply transition-all duration-200;
 }
