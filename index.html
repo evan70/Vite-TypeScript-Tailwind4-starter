@@ -11,13 +11,36 @@
 </head>
 
 <body class="bg-white">
-    <!-- Main content -->
-    <div class="w-screen h-dvh flex items-center justify-center">
-        <h1 class="text-4xl font-bold opacity-0 transition-opacity duration-500 delay-500" 
-            style="animation: fadeIn 0.5s ease-out 0.5s forwards;">
-            Začíname
-        </h1>
-    </div>
+    <!-- Základný header bez JavaScriptu -->
+    <header class="w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="/src/assets/logo.svg" class="h-8 w-8" alt="Logo">
+                    <img src="/src/assets/logo-text.svg" class="h-6" alt="Logo text">
+                </a>
+                <!-- Základná navigácia -->
+                <nav class="hidden md:flex space-x-8">
+                    <!-- Základné menu položky -->
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hlavný obsah -->
+    <main class="w-screen h-dvh flex items-center justify-center">
+        <h1 class="text-4xl font-bold">Začíname</h1>
+    </main>
+
+    <!-- Správa pre užívateľov bez JavaScriptu -->
+    <noscript>
+        <div class="fixed top-0 left-0 w-full bg-yellow-100 p-4 text-center">
+            Pre plnú funkcionalitu tejto stránky je potrebné povoliť JavaScript. 
+            Tu sú <a href="https://www.enable-javascript.com/sk/" class="underline">inštrukcie ako povoliť JavaScript</a>.
+        </div>
+    </noscript>
+
+    <!-- JavaScript sa načíta ako vylepšenie -->
     <script type="module" src="/src/main.ts"></script>
 </body>
 
