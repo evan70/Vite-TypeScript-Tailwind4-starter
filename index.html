@@ -6,41 +6,35 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/style.css" />
-
-    <title>Vite + TS</title>
+    <title>Chart Libraries Comparison</title>
 </head>
 
-<body class="bg-white">
-    <!-- Základný header bez JavaScriptu -->
-    <header class="w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
-                <a href="/" class="flex items-center space-x-3">
-                    <img src="/src/assets/logo.svg" class="h-8 w-8" alt="Logo">
-                    <img src="/src/assets/logo-text.svg" class="h-6" alt="Logo text">
-                </a>
-                <!-- Základná navigácia -->
-                <nav class="hidden md:flex space-x-8">
-                    <!-- Základné menu položky -->
-                </nav>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <div class="min-h-dvh p-4 md:p-8">
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-2xl md:text-3xl font-bold text-center text-gray-800 dark:text-white">
+                Chart Libraries Comparison
+            </h1>
+        </header>
+
+        <!-- Main grid container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <!-- ApexCharts container -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-200">ApexCharts</h2>
+                <div id="apexchart-container" class="w-full h-[400px]"></div>
+            </div>
+
+            <!-- Chart.js container -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-200">Chart.js</h2>
+                <div id="chartjs-container" class="w-full h-[400px]">
+                    <canvas id="chartjs-canvas"></canvas>
+                </div>
             </div>
         </div>
-    </header>
-
-    <!-- Hlavný obsah -->
-    <main class="w-screen h-dvh flex items-center justify-center">
-        <h1 class="text-4xl font-bold">Začíname</h1>
-    </main>
-
-    <!-- Správa pre užívateľov bez JavaScriptu -->
-    <noscript>
-        <div class="fixed top-0 left-0 w-full bg-yellow-100 p-4 text-center">
-            Pre plnú funkcionalitu tejto stránky je potrebné povoliť JavaScript. 
-            Tu sú <a href="https://www.enable-javascript.com/sk/" class="underline">inštrukcie ako povoliť JavaScript</a>.
-        </div>
-    </noscript>
-
-    <!-- JavaScript sa načíta ako vylepšenie -->
+    </div>
     <script type="module" src="/src/main.ts"></script>
 </body>
 

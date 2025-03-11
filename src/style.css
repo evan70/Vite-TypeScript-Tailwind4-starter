@@ -1,6 +1,35 @@
 @import "tailwindcss";
 
-/* Existujúce animácie */
+:root {
+    @apply transition-colors duration-200;
+}
+
+body {
+    @apply transition-colors duration-200;
+}
+
+.dark {
+    @apply bg-gray-900 text-white;
+}
+
+/* Chart container styles */
+#apexchart-container, #chartjs-container {
+    @apply transition-all duration-200;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #apexchart-container, #chartjs-container {
+        height: 300px !important;
+    }
+}
+
+/* Transitions */
+.transition-colors {
+    @apply transition-all duration-200;
+}
+
+/* Existujúce animácie zostávajú... */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -28,14 +57,4 @@
 /* Nové štýly pre header */
 .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-}
-
-/* Dark mode */
-.dark {
-    @apply bg-gray-900 text-white;
-}
-
-/* Transitions */
-.transition-colors {
-    @apply transition-all duration-200;
 }
