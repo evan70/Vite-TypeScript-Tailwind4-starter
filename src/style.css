@@ -16,7 +16,7 @@
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);  /* Zmenené z 360deg na -360deg pre opačnú rotáciu */
     }
 }
 
